@@ -1,5 +1,11 @@
 <form>
-  <h3>What's your name?</h3>
-  <input type="text" value="">
+  <h1>What's your name?</h1>
+  <input type="text" name="name">
   <input type="submit">
 </form>
+
+<% if @name == "" %>
+  <h2>Please enter your name</h2>
+<% elsif @name %>
+  <h2>Welcome <%= @name %></h2>
+<% end %>
