@@ -6,11 +6,10 @@ When(/^I follow "([^"]*)"$/) do |link|
   click_link link
 end
 
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  expect(page).to have_content(arg1)
+Then(/^I should see "([^"]*)"$/) do |page|
+  expect(page).to have_content(page)
 end
 
-When(/^I enter "([^"]*)"$/) do |arg1|
-  fill_in('name', :with => arg1)
+When(/^I type "([^"]*)"$/) do |name|
+  fill_in('name', :with => name)
 end
-
